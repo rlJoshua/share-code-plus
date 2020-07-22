@@ -41,6 +41,9 @@ si le code est dans `data/wMdWMbwAQ` on pourra trouver "Python" dans
 
 ## Partie 2 : Changez le stockage de fichiers à enregistrement dans un SGBDR
 
+Copiez `sharecode.py` sous le nom `sharecodedb.py` pour cette partie et la
+suite.
+
 Note : utilisez sqlite comme SGBDR (le connecteur est disponible en standard
 avec Python 3, vous n'avez qu'à installer le client sqlite en ligne de commande
 pour créer le schéma de la base). En production sur un vrai serveur Web
