@@ -2,7 +2,7 @@
 
 Extension de Share Code : meta données, log utilisateurs, SQL, coloration de code
 
-- Télécharger et installer le code de base
+## Téléchargez et installez le code de base
 
 Placez vous dans un venv actif.
 ~~~~
