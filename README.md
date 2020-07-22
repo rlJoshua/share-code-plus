@@ -31,6 +31,10 @@ Ouvrez un navitageur et allez à l'url : http://localhost:5000/
 
 Etudiez la structure de l'application : vues (sharecode.py) et modèle métier (model.py).
 
+Notez que toute url qui déclenche un effet secondaire sur le serveur (écriture, création,
+etc. de fichiers par exemple) se termine en redirigeant (Location: http://.../ailleurs dans
+l'en-tête HTTP) vers une autre url.
+
 ![](sharecode1.png)
 
 # Atelier : améliorer l'application
