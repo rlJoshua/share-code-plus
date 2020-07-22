@@ -39,7 +39,7 @@ fichier qui reprend l'id du code avec l'extension .lang (par example
 si le code est dans `data/wMdWMbwAQ` on pourra trouver "Python" dans
 `data/wMdWMbwAQ.lang`
 
-## Partie 2 : Changez le stockage de fichiers à enregistrement dans un SGBDR
+## Partie 2 : Changez le procédé de stockage, plus de fichiers mais un SGBDR
 
 Copiez `sharecode.py` sous le nom `sharecodedb.py` pour cette partie et la
 suite.
