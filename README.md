@@ -61,7 +61,7 @@ qui publient du code (pas les lecteurs) : adresse ip, navigateur _(user agent)_,
 date et heure de dernière modification.
 
 Ajoutez dans le modèle métier l'enregistrement de ces informations (disponibles
-à travers l'objet request passé à une vue par Flask).
+à travers l'objet request construit par Flask).
 
 Ajoutez une page accessible à travers /admin qui montre les extraits de code
 publiés et ces informations concernant la dernière modification.
