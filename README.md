@@ -72,7 +72,7 @@ Installez ce module, mettez à jour requirements.txt, utilisez le pour colorer
 le code affiché par la page associée aux URLs de type `/view/.../` dans le bon
 langage (celui enregistré en base de données).
 
-## Partie optionelle
+## Partie optionnelle
 
 - Pourrait-on détecter automatiquement le langage utilisé ? Comment ?
 - Améliorez l'esthétique du site et son confort d'utilisation (grace à
