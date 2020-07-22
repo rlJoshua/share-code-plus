@@ -86,7 +86,7 @@ publiés et ces informations concernant la dernière modification.
 
 ## Partie 4 : colorisation de code
 
-Il existe un module Python pour colorer syntaxiquement du code : pygment.
+Il existe un module Python pour colorer syntaxiquement du code : pygments.
 
 Installez ce module, mettez à jour requirements.txt, utilisez le pour colorer
 le code affiché par la page associée aux URLs de type `/view/.../` dans le bon
