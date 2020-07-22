@@ -18,6 +18,13 @@ Etudiez la structure de l'application : vues (sharecode.py) et modèle métier (
 
 # Atelier : améliorer l'application
 
+Livrables : dans un dépôt GIT public (gitlab, github, framagit, ...) 
+
+- Une documentation succinte mais claire au format _markdown_ (comme ce fichier)
+- Scripts et modules Python modifiés et créés
+- Gabarits HTML/CSS/JS 
+- Les requètes SQL de création de tables (fichier `initdb.sqli`)
+
 ## Partie 1 : enregistrer le langage de programmation utilisé
 
 Ajouter une liste déroulante dans la page Web de création/modification d'un
