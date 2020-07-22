@@ -11,12 +11,15 @@ quel terminal système où vous avez activé un venv déjà créé par ailleurs)
 (venv) $ cd share-code-plus
 (venv) $ pip install -r requirements.txt
 (venv) $ export FLASK_ENV=development
+(venv) C:\...> set FLASK_ENV=development
 (venv) $ python sharecode.py
 ~~~~
 
 Ouvrez un navitageur et allez à l'url : http://localhost:5000/
 
 Etudiez la structure de l'application : vues (sharecode.py) et modèle métier (model.py).
+
+![](sharecode1.png)
 
 # Atelier : améliorer l'application
 
