@@ -4,12 +4,24 @@ Extension de Share Code : meta données, log utilisateurs, SQL, coloration de co
 
 ## Téléchargez et installez le code de base
 
+Rappel: PyCharm, normalement, crée un venv dans chaque projet, vous pouvez
+en créer indépendamment de PyCharm:
+~~~~
+$ cd /où/vous/voulez
+$ python3 -m venv venv
+$ source venv/bin/activate
+c:\...> venv\Scripts\activate.bat
+(venv) ... $ type python
+/chemin/vers/votre/venv/bin/python
+~~~~
+
 Placez vous dans un venv actif (onglet "Terminal" de PyCharm ou n'importe
 quel terminal système où vous avez activé un venv déjà créé par ailleurs).
 ~~~~
 (venv) $ git clone https://framagit.org/jpython/share-code-plus.git
 (venv) $ cd share-code-plus
 (venv) $ pip install -r requirements.txt
+(venv) $ python -m pip install -r requirements.txt # si la commande précédente ne marche pas
 (venv) $ export FLASK_ENV=development
 (venv) C:\...> set FLASK_ENV=development
 (venv) $ python sharecode.py
