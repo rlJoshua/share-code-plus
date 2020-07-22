@@ -83,4 +83,9 @@ langage (celui enregistré en base de données).
   sur les pages d'admin, on peut configurer cela côté serveur Web de
   production -- Apache, NGINX, ...). Un utilisateur dont l'IP est dans
   cette liste se voit interdire l'accès en écriture au site.
+- Développez un ensemble de vues pour accéder aux services de partage
+  de code via une API REST sur des URLs de la forme : `/api/...`.
+  Documentez cette API et fournissez un script (Python ou Shell) de
+  test de l'API.
+
 
