@@ -37,7 +37,7 @@ fichier qui reprend l'id du code avec l'extension .lang (par example
 si le code est dans `data/wMdWMbwAQ` on pourra trouver "Python" dans
 `data/wMdWMbwAQ.lang`
 
-## Changez le stockage : de fichiers à enregistrement dans un SGBDR
+## Partie 2 : Changez le stockage de fichiers à enregistrement dans un SGBDR
 
 Note : utilisez sqlite comme SGBDR (le connecteur est disponible en standard
 avec Python 3, vous n'avez qu'à installer le client sqlite en ligne de commande
