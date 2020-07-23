@@ -2,7 +2,7 @@
    <head>
 	   <title>Code Share: Share your codes!</title>
    </head>
-   <body>
+   <p>
 	   <h1>Code Share: Share your codes!</h1>
 	   <p align=center>
 	   <img width=150 src='static/The_GNU_logo.png'/>
@@ -13,7 +13,7 @@
 	   {% if last_added %}
 	   <h2>Derniers ajouts</h2>
 	   {% for entry in last_added %}
-	   <p><a href="/view/{{ entry["uid"] }}">{{ entry["uid"] }}</a>
+           <p><a href="/view/{{ entry["uid"] }}">{{ entry["uid"] }}</a> <pre>({{entry["lang"]}})</pre>
 	   <p><pre>{{ entry["code"] }}</pre>
 	   <hr/>
 	   {% endfor %}

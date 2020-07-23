@@ -8,9 +8,14 @@
 	   <form>
 		 <p align=left>URL: <input name='url' value="{{ url }}">
 	   </form>
+       <p align="left">
+            <pre>Language : {{ lang }}</pre>
+       </p>
 	   <p align=left>
+            <div>Code</div>
 		   <pre>{{ code }}</pre>
 	   </p>
+
 	   <a href="/edit/{{ uid }}">Edit</a></br>
 	   <a href="/create">Create New</a>
    </body>
