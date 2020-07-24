@@ -13,8 +13,8 @@
 	   {% if last_added %}
 	   <h2>Derniers ajouts</h2>
 	   {% for entry in last_added %}
-           <p><a href="/view/{{ entry["uid"] }}">{{ entry["uid"] }}</a> <pre>({{entry["lang"]}})</pre>
-	   <p><pre>{{ entry["code"] }}</pre>
+           <p><a href="/view/{{ entry[0] }}">{{ entry[0] }}</a> <pre>({{entry[2]}})</pre>
+	   <p><pre>{{ entry[1] }}</pre>
 	   <hr/>
 	   {% endfor %}
 	   {% endif %}
