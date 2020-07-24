@@ -68,12 +68,10 @@ def createCode():
         INSERT INTO code (uid) values (?)
     ''', (uid,))
 
-    result = cur.lastrowid
-
     conn.commit()
     conn.close()
 
-    return result
+    return uid
 
 
 def updateCode(uid, code, lang):
@@ -88,6 +86,6 @@ def updateCode(uid, code, lang):
     ''', (code, lang, uid))
 
     conn.commit()
-    cur.close()
+    conn.close()
 
     return result
