@@ -15,8 +15,17 @@ def initTable():
             uid INTEGER(30) PRIMARY KEY,
             code TEXT DEFAULT '# Insert your code here ...',
             language VARCHAR(25) DEFAULT 'Python'
-        )
-    ''')
+        )''')
+
+    cur.execute('''
+        CREATE TABLE IF NOT EXISTS edition (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        ip VARCHAR(50),
+        navigator VARCHAR (200),
+        date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        code_uid INTEGER,
+        FOREIGN KEY (code_uid) REFERENCES code(uid)
+        )''')
 
     conn.commit()
     conn.close()
@@ -68,12 +77,10 @@ def createCode():
         INSERT INTO code (uid) values (?)
     ''', (uid,))
 
-    result = cur.lastrowid
-
     conn.commit()
     conn.close()
 
-    return result
+    return uid
 
 
 def updateCode(uid, code, lang):
@@ -88,6 +95,39 @@ def updateCode(uid, code, lang):
     ''', (code, lang, uid))
 
     conn.commit()
-    cur.close()
+    conn.close()
 
     return result
+
+def addEdition(ip, navigator, uid):
+    conn = connectdb()
+    cur = conn.cursor()
+
+    cur.execute('''
+        INSERT INTO edition (ip, navigator, code_uid) VALUES (?, ?, ?)
+    ''', (ip, navigator, uid))
+
+    result = cur.lastrowid
+
+    conn.commit()
+    conn.close()
+
+    return result
+
+
+def getAllEditions():
+    conn = connectdb()
+    cur = conn.cursor()
+
+    cur.execute('''
+        SELECT * FROM edition
+        ORDER BY date DESC
+    ''')
+
+    result = cur.fetchall()
+
+    conn.commit()
+    conn.close()
+
+    return result
+

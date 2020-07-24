@@ -15,6 +15,8 @@ def index():
 @app.route('/create')
 def create():
     uid = createCode()
+    addEdition(request.remote_addr, request.user_agent.string, uid)
+
     return redirect("{}edit/{}".format(request.host_url, uid))
     
 @app.route('/edit/<string:uid>/')
@@ -39,6 +41,7 @@ def publish():
     lang = request.form['lang']
 
     updateCode(uid, code, lang)
+    addEdition(request.remote_addr, request.user_agent.string, uid)
 
     return redirect("{}{}/{}".format(request.host_url,
                                      request.form['submit'],
@@ -47,8 +50,10 @@ def publish():
 @app.route('/view/<string:uid>/')
 def view(uid):
     row = getCode(uid)
+
     if row is None:
-        return render_template('error.html',uid=uid)
+        return render_template('error.html', uid=uid)
+
     d = dict(
         uid=uid,
         code=row[1],
@@ -59,7 +64,12 @@ def view(uid):
 
 @app.route('/admin/')
 def admin():
-    pass
+    editions = getAllEditions()
+
+    if editions is None:
+        return render_template('error.html')
+
+    return render_template('admin.html', editions = editions)
 
 if __name__ == '__main__':
     app.run()
